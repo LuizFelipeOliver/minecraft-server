@@ -1,0 +1,89 @@
+# =============================================
+# Minecraft Server - .gitignore
+# =============================================
+
+# Logs
+logs/
+*.log
+
+# Crash reports
+hs_err_pid*.log
+
+# Dados binários do mundo (regiões, entidades, POI)
+world/region/
+world/entities/
+world/poi/
+world/advancements/
+world/playerdata/
+world/stats/
+world/data/
+world/level.dat
+world/level.dat_old
+world/uid.dat
+world/session.lock
+
+world_nether/DIM-1/region/
+world_nether/DIM-1/entities/
+world_nether/DIM-1/data/
+world_nether/level.dat
+world_nether/level.dat_old
+world_nether/uid.dat
+world_nether/session.lock
+
+world_the_end/DIM1/region/
+world_the_end/DIM1/entities/
+world_the_end/DIM1/data/
+world_the_end/level.dat
+world_the_end/level.dat_old
+world_the_end/uid.dat
+world_the_end/session.lock
+
+# Cache de remapeamento do Paper
+plugins/.paper-remapped/
+
+# Bibliotecas baixadas automaticamente
+libraries/
+
+# Arquivos temporários do Spark
+plugins/spark/
+
+# Dados de jogadores e cache
+usercache.json
+ops.json
+banned-ips.json
+banned-players.json
+whitelist.json
+
+# =============================================
+# Plugins - ignorar TODOS exceto os listados
+# =============================================
+
+# Ignorar todos os JARs de plugins
+plugins/*.jar
+
+# Ignorar pastas de plugins removidos
+plugins/bStats/
+
+# =============================================
+# Manter: Chunky, LuckPerms, AuraSkills, Essentials, CustomEnchantments
+# =============================================
+
+!plugins/Chunky-*.jar
+!plugins/Chunky/
+!plugins/Chunky/**
+
+!plugins/LuckPerms-*.jar
+!plugins/LuckPerms/
+!plugins/LuckPerms/**
+
+!plugins/AuraSkills-*.jar
+!plugins/AuraSkills/
+!plugins/AuraSkills/**
+
+!plugins/EssentialsX-*.jar
+!plugins/Essentials/
+!plugins/Essentials/**
+
+!plugins/CustomEnchantments-*.jar
+!plugins/CustomEnchantments3/
+!plugins/CustomEnchantments3/**

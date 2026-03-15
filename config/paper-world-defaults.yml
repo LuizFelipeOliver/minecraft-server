@@ -72,7 +72,7 @@ collisions:
   allow-player-cramming-damage: false
   allow-vehicle-collisions: true
   fix-climbing-bypassing-cramming-rule: false
-  max-entity-collisions: 8
+  max-entity-collisions: 2
   only-players-collide: false
 command-blocks:
   force-follow-perm-level: true
@@ -140,9 +140,22 @@ entities:
   spawning:
     all-chunks-are-slime-chunks: false
     alt-item-despawn-rate:
-      enabled: false
+      enabled: true
       items:
+        bamboo: 300
         cobblestone: 300
+        dirt: 300
+        grass: 300
+        gravel: 300
+        kelp: 300
+        melon_slice: 300
+        netherrack: 300
+        pumpkin: 300
+        red_sand: 300
+        sand: 300
+        sugar_cane: 300
+        twisting_vines: 300
+        weeping_vines: 300
     count-all-mobs-for-spawning: false
     creative-arrow-despawn-rate: default
     despawn-range-shape: ELLIPSOID
@@ -243,7 +256,7 @@ environment:
   max-block-ticks: 65536
   max-fluid-ticks: 65536
   nether-ceiling-void-damage-height: disabled
-  optimize-explosions: false
+  optimize-explosions: true
   portal-create-radius: 16
   portal-search-radius: 128
   portal-search-vanilla-dimension-scaling: true
@@ -296,10 +309,10 @@ misc:
   disable-sprint-interruption-on-attack: false
   light-queue-size: 20
   max-leash-distance: default
-  redstone-implementation: VANILLA
+  redstone-implementation: ALTERNATE_CURRENT
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
-  update-pathfinding-on-block-update: true
+  update-pathfinding-on-block-update: false
 scoreboards:
   allow-non-player-entities-on-scoreboards: true
   use-vanilla-world-scoreboard-name-coloring: false
@@ -308,15 +321,15 @@ spawn:
 tick-rates:
   behavior:
     villager:
-      validatenearbypoi: -1
+      validatenearbypoi: 60
   container-update: 1
-  dry-farmland: 1
-  grass-spread: 1
-  mob-spawner: 1
+  dry-farmland: 10
+  grass-spread: 4
+  mob-spawner: 2
   sensor:
     villager:
       secondarypoisensor: 40
-  wet-farmland: 1
+  wet-farmland: 10
 unsupported-settings:
   disable-world-ticking-when-empty: false
   fix-invulnerable-end-crystal-exploit: true
